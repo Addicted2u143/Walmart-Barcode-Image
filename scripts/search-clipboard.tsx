@@ -43,6 +43,6 @@ async function onClick() {
 
 	if (clipboardText) {
 		const s = encodeURIComponent(clipboardText);
-		location.href = `https://www.target.com/s?searchTerm=${s}`;
+		location.href = `https://www.walmart.com/s?searchTerm=${s}`;
 	}
 }
