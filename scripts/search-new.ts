@@ -20,7 +20,7 @@ addEventListener("pointerdown", createLongPointerDownListener({
 
 		if (inputEl?.value) {
 			const s = encodeURIComponent(inputEl.value);
-			window.open(`https://www.target.com/s?searchTerm=${s}`, "_blank");
+			window.open(`https://www.walmart.com/s?searchTerm=${s}`, "_blank");
 		} else {
 			inputEl?.select();
 		}
