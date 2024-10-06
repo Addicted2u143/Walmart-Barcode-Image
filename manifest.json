@@ -1,12 +1,12 @@
 {
-	"name": "Turtlemay's Target Extension",
+	"name": "Turtlemay's walmart Extension",
 	"author": "Turtlemay",
 	"version": "1.15.2",
-	"description": "Extension for Target.com",
+	"description": "Extension for walmart.com",
 	"manifest_version": 3,
 	"content_scripts": [
 		{
-			"matches": ["https://*.target.com/*"],
+			"matches": ["https://*.walmart.com/*"],
 			"css": [
 				"css/style.css",
 				"css/cleanup.css"
@@ -19,5 +19,5 @@
 		"matches": ["*://*/*"]
 	}],
 	"permissions": ["activeTab", "tabs"],
-	"host_permissions": ["https://*.target.com/*"]
+	"host_permissions": ["https://*.walmart.com/*"]
 }
