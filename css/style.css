@@ -1,0 +1,434 @@
+/* ==============================
+   Extension global
+   ============================== */
+
+.turtlemay__enterAnimation {
+	transition-property: all;
+	animation-name: turtlemay-enter-animation;
+	animation-duration: 300ms;
+}
+
+.turtlemay__attentionTextAnimation {
+	animation-name: turtlemay-attention-text-animation;
+	animation-duration: 0.5s;
+	animation-iteration-count: 3;
+}
+
+/* ==============================
+   Math parser
+   ============================== */
+
+.turtlemay__mathWidgetContainer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+
+.turtlemay__mathWidget {
+	position: absolute;
+	top: 100%;
+	right: 5%;
+	padding: 1em;
+	background: rgba(0, 0, 0, 0.9);
+	border-radius: 0 0 10px 10px;
+	color: #fff;
+	font: 16px "Helvetica for Target", HelveticaForTarget, Targetica, "HelveticaNeue for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	z-index: 100000;
+	transition: all 200ms;
+}
+
+.turtlemay__mathWidget:not([data-turtlemay-active="true"]) {
+	opacity: 0;
+}
+
+.turtlemay__mathWidgetEqualsSign {
+	font-weight: bold;
+	color: #666;
+}
+
+.turtlemay__mathWidgetEqualsSign:after {
+	content: " ";
+	white-space: pre;
+}
+
+/* ==============================
+   Product barcode
+   ============================== */
+
+.turtlemay__barcodeWidget {
+	margin: 1em 0;
+}
+
+.turtlemay__barcodeWidgetTabs a {
+	display: inline-block;
+	font-size: 16px;
+	padding: 0.5em 1em;
+	margin: 0 5px 0 0;
+	background: white;
+	border-radius: 4px 4px 0 0;
+	cursor: pointer;
+	user-select: none;
+}
+
+.turtlemay__barcodeWidgetTabs a[data-turtlemay-active] {
+	font-weight: bold;
+	background: rgb(247, 247, 247);
+}
+
+.turtlemay__barcodeWidgetBarcodeContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1em 0.25em;
+	background: rgb(247, 247, 247);
+}
+
+.turtlemay__barcodeWidgetCanvasError {
+	display: none;
+}
+
+.turtlemay__barcodeWidgetCanvas[data-turtlemay-canvas-error="true"] {
+	display: none;
+}
+
+.turtlemay__barcodeWidgetCanvas[data-turtlemay-canvas-error="true"]+.turtlemay__barcodeWidgetCanvasError {
+	display: unset;
+}
+
+/* ==============================
+   Search results barcode
+   ============================== */
+
+.turtlemay__userBarcodeWidget {
+	margin: 1em 0;
+}
+
+.turtlemay__userBarcodeWidgetBarcodeContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.5em 0.25em;
+	background: rgb(247, 247, 247);
+}
+
+.turtlemay__userBarcodeWidgetQrResult {
+	display: flex;
+	gap: 1em;
+}
+
+.turtlemay__userBarcodeWidgetQrDetailHeader {
+	font-weight: bold !important;
+}
+
+.turtlemay__userBarcodeWidgetQrDetailValue {
+	display: inline-block;
+	max-width: 150px;
+	font: 1em monospace;
+}
+
+/* ==============================
+   Search new window
+   ============================== */
+
+.turtlemay__searchNewWindowLongPressable {
+	user-select: none;
+}
+
+.turtlemay__searchNewWindowLongPressable--pressed::after {
+	content: "↗";
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	width: 20px;
+	height: 20px;
+	font: 20px monospace;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(255, 0, 0, 0.75);
+	color: #fff;
+	border-radius: 50%;
+	pointer-events: none;
+}
+
+/* ==============================
+   Input type toggle
+   ============================== */
+
+.turtlemay__inputButtonLongPressable {
+	user-select: none;
+}
+
+.turtlemay__inputButtonLongPressable--pressed::after {
+	content: "⌨️";
+	position: absolute;
+	top: -15px;
+	right: -15px;
+	width: 20px;
+	height: 20px;
+	font: 15px monospace;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(255, 0, 0, 0.75);
+	color: #fff;
+	border-radius: 50%;
+	pointer-events: none;
+}
+
+form:has(button[data-test="@web/Search/Microphone"]) input[inputmode="numeric"] {
+	background: linear-gradient(90deg, rgb(255, 205, 205) 0%, transparent 2%);
+}
+
+/* ==============================
+   Dashboard button
+   ============================== */
+
+.turtlemay__dashboardButton {
+	filter: grayscale(1);
+	user-select: none;
+}
+
+.turtlemay__dashboardButtonIcon {
+	padding: 0 0.5em;
+}
+
+/* ==============================
+   Clipboard button
+   ============================== */
+
+.turtlemay__clipboardButton {
+	filter: grayscale(1);
+	user-select: none;
+}
+
+.turtlemay__clipboardButtonIcon {
+	padding: 0 0.5em;
+}
+
+/* ==============================
+   Site footer
+   ============================== */
+
+.turtlemay__footerText {
+	color: rgb(199, 250, 170);
+}
+
+.turtlemay__footerText>*:not(:last-of-type)::after {
+	content: " ";
+	white-space: pre;
+}
+
+.turtlemay__footerTextIcon {
+	filter: grayscale(1) contrast(0) brightness(0) invert(1);
+}
+
+.turtlemay__footerTextVersion {
+	color: rgb(255, 203, 190);
+}
+
+/* ==============================
+   Dashboard
+   ============================== */
+
+.turtlemay__dash {
+	background: #111;
+	transition: all 200ms;
+	font: 16px sans-serif;
+
+	&:not([data-turtlemay-active="true"]) {
+		height: 0;
+		opacity: 0;
+		pointer-events: none;
+		overflow: hidden;
+	}
+}
+
+.turtlemay__dashTopBar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #222;
+}
+
+.turtlemay__dashTopBarInput {
+	flex: 1;
+}
+
+.turtlemay__dashTopBarInput :is(input, textarea) {
+	width: 100%;
+	height: 100%;
+	padding: 1em 1.5em;
+	font: 1em sans-serif;
+	color: #fff;
+	background: #222;
+	border: 0;
+	outline: 0;
+}
+
+.turtlemay__dashTopBarButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font: 2em monospace;
+	width: 1.5em;
+	height: 1.5em;
+	background: #333;
+	color: #999;
+	margin: 0 2px;
+	transition: all 200ms;
+	cursor: pointer;
+	user-select: none;
+
+	&:active {
+		filter: brightness(1.5);
+		transform: scale(0.9);
+	}
+}
+
+.turtlemay__dashInputSpinnerContainer {
+	position: relative;
+}
+
+.turtlemay__dashInputSpinner {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	border-color: #666 transparent #666 transparent;
+	animation: turtlemay-spin-animation 1s linear infinite;
+	transition: all 200ms;
+	pointer-events: none;
+
+	&:not([data-turtlemay-active="true"]) {
+		opacity: 0;
+	}
+}
+
+.turtlemay__dashContent {
+	color: #fff;
+	font: 1em sans-serif;
+	padding: 2em;
+	min-width: 0;
+
+	&:empty {
+		display: none;
+	}
+
+	& > * {
+		margin: 0 0 2em;
+	}
+}
+
+.turtlemay__dashContentTip {
+	font: italic 1em sans-serif;
+	color: #666;
+	background: #000;
+	border-radius: 10px;
+	padding: 1em;
+}
+
+.turtlemay__dashResult {
+	text-align: right;
+}
+
+.turtlemay__dashResultDatabarCanvas {
+	image-rendering: pixelated;
+	box-sizing: content-box;
+	position: relative;
+	background: #fff;
+	border-left: 4px solid #888;
+	padding: 0.75em;
+	margin: -3em 2em 0 4em;
+	border-radius: 5px;
+}
+
+.turtlemay__dashResultInfo {
+	font: 1em sans-serif;
+	padding: 1em 1em 4em;
+	background: #000;
+	color: #888;
+	border-radius: 10px;
+	text-align: left;
+	overflow-wrap: break-word;
+	min-width: 0;
+}
+
+.turtlemay__dashResultInfoValue {
+	font: italic 1.2em monospace;
+}
+
+.turtlemay__dashResultInfo a {
+	color: white;
+	transition: all 200ms;
+	text-decoration: none;
+	border-bottom: 2px solid #444;
+
+	&:active {
+		filter: brightness(0.5);
+	}
+}
+
+.turtlemay__dashResultInfo ul {
+	padding: 0;
+}
+
+.turtlemay__dashResultInfo li {
+	list-style-type: none;
+	margin: 1em 0;
+}
+
+.turtlemay__dashResultOrdinalContainer {
+	position: relative;
+}
+
+.turtlemay__dashResultOrdinal {
+	position: absolute;
+	left: 0.5em;
+	bottom: -1em;
+	background: #111;
+	color: #fff;
+	border: 5px solid #222;
+	font: 1.5em monospace;
+	width: 2em;
+	height: 2em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	user-select: none;
+}
+
+/* ==============================
+   Animations
+   ============================== */
+
+@keyframes turtlemay-enter-animation {
+	from {
+		transform: scale(1.2);
+		opacity: 0;
+	}
+}
+
+@keyframes turtlemay-attention-text-animation {
+	50% {
+		background-color: darkred;
+		color: white;
+	}
+}
+
+@keyframes turtlemay-spin-animation {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
