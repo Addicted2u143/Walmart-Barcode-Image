@@ -248,7 +248,7 @@ function getGoogleSearchUrl(str: string) {
 	return `https://www.google.com/search?q=${s}`;
 }
 
-function getTargetSearchUrl(str: string) {
+function getWalmartSearchUrl(str: string) {
 	const s = encodeURIComponent(str);
-	return `https://www.target.com/s?searchTerm=${s}`;
+	return `https://www.walmart.com/s?searchTerm=${s}`;
 }
